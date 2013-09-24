@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+	url(r'^post/(?P<post_id>\d+)/detail_html$', newapp.views.post_detail, name='post_detail'),
+
 )
