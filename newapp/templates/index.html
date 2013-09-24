@@ -1,0 +1,12 @@
+{% if post_list %}
+	<ul>
+		{% for post in post_list %}
+		<li>
+		<a href="/post/{{ post.id }}">{{ post.content }}</a>
+		<span>{{ post.created_at }}</span>
+		</li>
+		{% endfor %}
+	</ul>
+{% else %}
+    <p>No post is made during the past two days.</p>
+{% endif %}
